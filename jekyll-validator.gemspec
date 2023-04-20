@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.metadata["source_code_uri"] = "https://github.com/nofeed/jekyll-validator"
   spec.metadata["changelog_uri"] = "https://github.com/nofeed/jekyll-validator/blob/main/CHANGELOG.md"
 
-  spec.files = ["lib/jekyll-validator.rb"]
+  spec.files         = `git ls-files -z`.split("\x0")
   spec.require_paths = ["lib"]
 
   spec.add_dependency "jekyll", ">= 3.0", "< 5.0"
