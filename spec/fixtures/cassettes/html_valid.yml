@@ -1,0 +1,83 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://validator.w3.org/nu/?out=json&parser=html&showsource=yes
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html> \n<html lang=\"en\">\n<head> \n  <meta charset=\"UTF-8\">\n
+        \ <title>Valid HTML Example</title>\n</head> \n\n<body>\n  <h1>This HTML is
+        invalid</h1>\n  \n  <p>On this page we will make some mistakes, to see the
+        validator in action.</p>\n  <p>On the web we can create links to the <a href=\"https://www.w3.org/\">W3C</a>,
+        the group that determines web technologies.</p>\n  <p>The <a href=\"http://validator.w3.org/\">validator</a>
+        is a tool that aids us in finding errors</p>\n</body>\n</html>"
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 04:06:08 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - gzip
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - content-type
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, User-Agent
+      Strict-Transport-Security:
+      - max-age=15552015; preload
+      Public-Key-Pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 7baa834ace4d887a
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=Jj2wYqfRAvwONmpGOPS1PLbWjmnwoK_n4mycpZkZahw-1681963568-0-AQ21YzKap60LKcqgWHbD47qi83YpH8yW22KVTkw5+ReZo7HK8HoTpcdcOcIr4TeU7FTjJux+ApY5iBXS4emBKqU=;
+        path=/; expires=Thu, 20-Apr-23 04:36:08 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7baa834ace4d887a-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"messages":[],"source":{"type":"text/html","encoding":"UTF-8","code":"<!DOCTYPE
+        html> \n<html lang=\"en\">\n<head> \n  <meta charset=\"UTF-8\">\n  <title>Valid
+        HTML Example</title>\n</head> \n\n<body>\n  <h1>This HTML is invalid</h1>\n  \n  <p>On
+        this page we will make some mistakes, to see the validator in action.</p>\n  <p>On
+        the web we can create links to the <a href=\"https://www.w3.org/\">W3C</a>,
+        the group that determines web technologies.</p>\n  <p>The <a href=\"http://validator.w3.org/\">validator</a>
+        is a tool that aids us in finding errors</p>\n</body>\n</html>"}}
+
+        '
+  recorded_at: Thu, 20 Apr 2023 04:06:08 GMT
+recorded_with: VCR 6.1.0

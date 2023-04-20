@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://validator.w3.org/nu/?out=json&parser=html&showsource=yes
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html> \n<html lang=\"en\">\n<head> \n  <meta charset=\"UTF-8\">\n
+        \ <title>Invalid HTML Example</title>\n  <noscript><img src=\"https://example.com/image.gif\"></noscript>
+        \n</head> \n\n<body>\n  <h1>This HTML is invalid</h1>\n  \n  <p>On this page
+        we will make some mistakes, to see the validator in action.\n  <p>On the web
+        we can create links to the <a href=\"https://www.w3.org/\">W3C</a>, the group
+        that determines web technologies.</p>\n  <p>The <a href=\"http://validator.w3.org/>validator</a>
+        is a tool that aids us in finding errors</p>\n</body>\n</html>"
+    headers:
+      Content-Type:
+      - text/html; charset=utf-8
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 20 Apr 2023 04:06:06 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Accept-Encoding:
+      - gzip
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - content-type
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Cache-Control:
+      - no-cache
+      Vary:
+      - Accept-Encoding, User-Agent
+      Strict-Transport-Security:
+      - max-age=15552015; preload
+      Public-Key-Pins:
+      - pin-sha256="cN0QSpPIkuwpT6iP2YjEo1bEwGpH/yiUn6yhdy+HNto="; pin-sha256="WGJkyYjx1QMdMe0UqlyOKXtydPDVrk7sl2fV+nNm1r4=";
+        pin-sha256="LrKdTxZLRTvyHM4/atX2nquX9BeHRZMCxg3cf4rhc2I="; max-age=864000
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 7baa833f4da023ef
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=kxRWjWHXxWMEnXIMQA4LvNQPN__JfChQecTKqSJENM0-1681963566-0-AWnhR+DoUt1HhiKXsTh+4v0M2+ZUfF5KzryyzdExbki9kz4cIgV7mjGeI4I/QNjdrFVmDD5JTtGZfvRxFwQPzVQ=;
+        path=/; expires=Thu, 20-Apr-23 04:36:06 GMT; domain=.w3.org; HttpOnly; Secure;
+        SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7baa833f4da023ef-LHR
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJtZXNzYWdlcyI6W3sidHlwZSI6ImVycm9yIiwibGFzdExpbmUiOjYsImxhc3RDb2x1bW4iOjUzLCJmaXJzdENvbHVtbiI6MTMsIm1lc3NhZ2UiOiJCYWQgc3RhcnQgdGFnIGluIOKAnGltZ+KAnSBpbiDigJxub3NjcmlwdOKAnSBpbiDigJxoZWFk4oCdLiIsImV4dHJhY3QiOiI8bm9zY3JpcHQ+PGltZyBzcmM9XCJodHRwczovL2V4YW1wbGUuY29tL2ltYWdlLmdpZlwiPjwvbm9zYyIsImhpbGl0ZVN0YXJ0IjoxMCwiaGlsaXRlTGVuZ3RoIjo0MX0seyJ0eXBlIjoiZXJyb3IiLCJsYXN0TGluZSI6NiwibGFzdENvbHVtbiI6NTMsImZpcnN0Q29sdW1uIjoxMywibWVzc2FnZSI6IkFuIOKAnGltZ+KAnSBlbGVtZW50IG11c3QgaGF2ZSBhbiDigJxhbHTigJ0gYXR0cmlidXRlLCBleGNlcHQgdW5kZXIgY2VydGFpbiBjb25kaXRpb25zLiBGb3IgZGV0YWlscywgY29uc3VsdCBndWlkYW5jZSBvbiBwcm92aWRpbmcgdGV4dCBhbHRlcm5hdGl2ZXMgZm9yIGltYWdlcy4iLCJleHRyYWN0IjoiPG5vc2NyaXB0PjxpbWcgc3JjPVwiaHR0cHM6Ly9leGFtcGxlLmNvbS9pbWFnZS5naWZcIj48L25vc2MiLCJoaWxpdGVTdGFydCI6MTAsImhpbGl0ZUxlbmd0aCI6NDF9LHsidHlwZSI6ImVycm9yIiwibGFzdExpbmUiOjYsImxhc3RDb2x1bW4iOjY0LCJmaXJzdENvbHVtbiI6NTQsIm1lc3NhZ2UiOiJTdHJheSBlbmQgdGFnIOKAnG5vc2NyaXB04oCdLiIsImV4dHJhY3QiOiJtYWdlLmdpZlwiPjwvbm9zY3JpcHQ+IFxuPC9oZSIsImhpbGl0ZVN0YXJ0IjoxMCwiaGlsaXRlTGVuZ3RoIjoxMX0seyJ0eXBlIjoiZXJyb3IiLCJsYXN0TGluZSI6NywibGFzdENvbHVtbiI6NywiZmlyc3RDb2x1bW4iOjEsIm1lc3NhZ2UiOiJTdHJheSBlbmQgdGFnIOKAnGhlYWTigJ0uIiwiZXh0cmFjdCI6Im9zY3JpcHQ+IFxuPC9oZWFkPiBcblxuPGJvIiwiaGlsaXRlU3RhcnQiOjEwLCJoaWxpdGVMZW5ndGgiOjd9LHsidHlwZSI6ImVycm9yIiwibGFzdExpbmUiOjksImxhc3RDb2x1bW4iOjYsImZpcnN0Q29sdW1uIjoxLCJtZXNzYWdlIjoiU3RhcnQgdGFnIOKAnGJvZHnigJ0gc2VlbiBidXQgYW4gZWxlbWVudCBvZiB0aGUgc2FtZSB0eXBlIHdhcyBhbHJlYWR5IG9wZW4uIiwiZXh0cmFjdCI6IjwvaGVhZD4gXG5cbjxib2R5PlxuICA8aDEiLCJoaWxpdGVTdGFydCI6MTAsImhpbGl0ZUxlbmd0aCI6Nn0seyJ0eXBlIjoiZXJyb3IiLCJsYXN0TGluZSI6MTYsImxhc3RDb2x1bW4iOjcsIm1lc3NhZ2UiOiJFbmQgb2YgZmlsZSByZWFjaGVkIHdoZW4gaW5zaWRlIGFuIGF0dHJpYnV0ZSB2YWx1ZS4gSWdub3JpbmcgdGFnLiIsImV4dHJhY3QiOiJcbjwvYm9keT5cbjwvaHRtbD4iLCJoaWxpdGVTdGFydCI6MTUsImhpbGl0ZUxlbmd0aCI6MX1dLCJzb3VyY2UiOnsidHlwZSI6InRleHQvaHRtbCIsImVuY29kaW5nIjoiVVRGLTgiLCJjb2RlIjoiPCFET0NUWVBFIGh0bWw+IFxuPGh0bWwgbGFuZz1cImVuXCI+XG48aGVhZD4gXG4gIDxtZXRhIGNoYXJzZXQ9XCJVVEYtOFwiPlxuICA8dGl0bGU+SW52YWxpZCBIVE1MIEV4YW1wbGU8L3RpdGxlPlxuICA8bm9zY3JpcHQ+PGltZyBzcmM9XCJodHRwczovL2V4YW1wbGUuY29tL2ltYWdlLmdpZlwiPjwvbm9zY3JpcHQ+IFxuPC9oZWFkPiBcblxuPGJvZHk+XG4gIDxoMT5UaGlzIEhUTUwgaXMgaW52YWxpZDwvaDE+XG4gIFxuICA8cD5PbiB0aGlzIHBhZ2Ugd2Ugd2lsbCBtYWtlIHNvbWUgbWlzdGFrZXMsIHRvIHNlZSB0aGUgdmFsaWRhdG9yIGluIGFjdGlvbi5cbiAgPHA+T24gdGhlIHdlYiB3ZSBjYW4gY3JlYXRlIGxpbmtzIHRvIHRoZSA8YSBocmVmPVwiaHR0cHM6Ly93d3cudzMub3JnL1wiPlczQzwvYT4sIHRoZSBncm91cCB0aGF0IGRldGVybWluZXMgd2ViIHRlY2hub2xvZ2llcy48L3A+XG4gIDxwPlRoZSA8YSBocmVmPVwiaHR0cDovL3ZhbGlkYXRvci53My5vcmcvPnZhbGlkYXRvcjwvYT4gaXMgYSB0b29sIHRoYXQgYWlkcyB1cyBpbiBmaW5kaW5nIGVycm9yczwvcD5cbjwvYm9keT5cbjwvaHRtbD4ifX0K
+  recorded_at: Thu, 20 Apr 2023 04:06:06 GMT
+recorded_with: VCR 6.1.0

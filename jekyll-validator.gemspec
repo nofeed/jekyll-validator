@@ -28,6 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rainbow"
   spec.add_dependency "w3c_validators"
 
-  spec.add_development_dependency "bundler"
-  spec.add_development_dependency "rspec", ">= 3.0"
+  spec.metadata["rubygems_mfa_required"] = "true"
 end

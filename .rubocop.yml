@@ -1,5 +1,14 @@
+require: rubocop-rspec
+
 AllCops:
   TargetRubyVersion: 2.6
+  NewCops: enable
+
+Naming/FileName:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
 
 Style/StringLiterals:
   Enabled: true

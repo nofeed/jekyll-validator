@@ -6,18 +6,12 @@ require "w3c_validators"
 require_relative "jekyll-validator/version"
 
 module Jekyll
-  class Error < StandardError; end
-
   class Validator
     class << self
       def call(file)
-        return unless File.extname(file) =~ /.css|.html/
-
         Jekyll.logger.info "\nValidating #{file}"
 
         results = validate(file)
-
-        return unless results.errors
 
         Jekyll.logger.info "The file #{file} has #{results.errors.length} validation errors".red
         results.errors.each { |err| Jekyll.logger.info err.to_s.red }
@@ -49,6 +43,9 @@ Jekyll::Hooks.register [:site], :post_write do |site|
   excluded = site.config["validator"]["exclude"]
 
   Dir.glob(File.join("_site", "**/*")).each do |file|
+    next if File.directory?(file)
+    next unless File.extname(file) =~ /.css|.html/
+
     Jekyll::Validator.call(file) unless excluded.any? { |path| file.include?(path) }
   end
 end
