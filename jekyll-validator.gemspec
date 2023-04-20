@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version = Jekyll::Validator::VERSION
   spec.authors = ["Nicholas Wieland"]
   spec.email = ["ngw@nofeed.org"]
+  spec.homepage = "https://github.com/nofeed/jekyll-validator"
 
   spec.summary = "Validates html against W3C Validator."
   spec.description = "Calls the W3C Validator API with every page Jekyll generates and displays the validation errors."
@@ -17,16 +18,16 @@ Gem::Specification.new do |spec|
 
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
-  # spec.metadata["homepage_uri"] = spec.homepage
-  # spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  # spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/nofeed/jekyll-validator"
+  spec.metadata["changelog_uri"] = "https://github.com/nofeed/jekyll-validator/blob/main/CHANGELOG.md"
 
   spec.files = ["lib/jekyll-validator.rb"]
   spec.require_paths = ["lib"]
 
   spec.add_dependency "jekyll", ">= 3.0", "< 5.0"
-  spec.add_dependency "rainbow"
-  spec.add_dependency "w3c_validators"
+  spec.add_dependency "rainbow", ">= 3.0", "< 4.0"
+  spec.add_dependency "w3c_validators", ">= 1.0", "< 2.0"
 
   spec.metadata["rubygems_mfa_required"] = "true"
 end

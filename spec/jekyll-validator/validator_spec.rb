@@ -30,7 +30,7 @@ RSpec.describe Jekyll::Validator do
       end
     end
 
-    context "and validating html" do
+    context "with HTML" do
       before do
         site.process
       end
@@ -52,7 +52,7 @@ RSpec.describe Jekyll::Validator do
       end
     end
 
-    context "and validating CSS" do
+    context "with CSS" do
       before do
         site.process
       end
