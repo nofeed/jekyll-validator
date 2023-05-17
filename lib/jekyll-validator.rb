@@ -10,7 +10,7 @@ module Jekyll
     class << self
       def call(file)
         Jekyll.logger.info "\nValidating #{file}"
-
+        
         results = validate(file)
 
         Jekyll.logger.info "The file #{file} has #{results.errors.length} validation errors".red
@@ -40,12 +40,14 @@ module Jekyll
 end
 
 Jekyll::Hooks.register [:site], :post_write do |site|
-  excluded = site.config["validator"]["exclude"]
+  return if ENV['JEKYLL_ENV'] == 'production'
+
+  excluded = site.config.dig("validator", "exclude")
 
   Dir.glob(File.join("_site", "**/*")).each do |file|
     next if File.directory?(file)
     next unless File.extname(file) =~ /.css|.html/
 
-    Jekyll::Validator.call(file) unless excluded.any? { |path| file.include?(path) }
+    Jekyll::Validator.call(file) unless excluded&.any? { |path| file.include?(path) }
   end
 end
