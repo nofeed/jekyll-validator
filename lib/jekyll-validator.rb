@@ -10,7 +10,7 @@ module Jekyll
     class << self
       def call(file)
         Jekyll.logger.info "\nValidating #{file}"
-        
+
         results = validate(file)
 
         Jekyll.logger.info "The file #{file} has #{results.errors.length} validation errors".red
@@ -40,7 +40,7 @@ module Jekyll
 end
 
 Jekyll::Hooks.register [:site], :post_write do |site|
-  return if ENV['JEKYLL_ENV'] == 'production'
+  break if ENV["JEKYLL_ENV"] == "production"
 
   excluded = site.config.dig("validator", "exclude")
 
